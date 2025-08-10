@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 
-export default function Login() {
+export default function Login({ setIsLoggedIn }) {
   const [form, setForm] = useState({ email: '', password: '' });
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = e => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -14,7 +15,13 @@ export default function Login() {
     e.preventDefault();
     setLoading(true);
     // Simulate login
-    setTimeout(() => setLoading(false), 1200);
+    setTimeout(() => {
+      setLoading(false);
+      // On successful login
+      localStorage.setItem('token', 'dummy-token'); // Simulate token
+      setIsLoggedIn(true);
+      navigate('/admin'); // Redirect to admin page
+    }, 1200);
   };
 
   return (

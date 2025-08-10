@@ -4,93 +4,64 @@
   align-items: center;
   padding: 1rem 2rem;
   background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .navbar-logo {
   font-size: 1.5rem;
   font-weight: bold;
-  letter-spacing: 0.5px;
   display: flex;
   align-items: center;
+  color: #fff;
 }
 
 .navbar-links {
   display: flex;
-  gap: 2rem;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .navbar-links a {
-  color: #fff;
   text-decoration: none;
+  color: #fff;
   font-weight: 500;
-  padding: 0.5rem 0;
+  transition: color 0.2s;
   position: relative;
 }
 
-.navbar-links a:hover {
-  color: rgba(255,255,255,0.9);
-}
 
-.navbar-links a:hover::after {
+.navbar-links a::after {
   content: '';
   position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
   height: 2px;
   background-color: #fff;
   border-radius: 1px;
+  transition: width 0.3s ease;
 }
 
-.navbar-menu-button {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+.logout-button {
+  background: transparent;
+  border: 1px solid #667eea;
+  color: #667eea;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
   cursor: pointer;
-  padding: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
 }
 
-@media (max-width: 768px) {
-  .navbar-pro {
-    padding: 1rem;
-  }
-  
-  .navbar-menu-button {
-    display: block;
-  }
-  
-  .navbar-links {
-    position: fixed;
-    flex-direction: column;
-    gap: 0;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-    padding: 1rem 0;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    transition: clip-path 0.3s ease;
-    z-index: 900;
-  }
-  
-  .navbar-links.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  
-  .navbar-links a {
-    width: 100%;
-    padding: 1rem 2rem;
-  }
-  
-  .navbar-links a:hover::after {
-    display: none;
-  }
+.logout-button:hover {
+  background: #667eea;
+  color: white;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-export default function Navbar() {
+export default function Navbar({ isLoggedIn, handleLogout }) {
   return (
     <nav className="navbar-pro">
       <div className="navbar-logo">
@@ -22,9 +22,13 @@ export default function Navbar() {
         <Link to="/">Home</Link>
         <Link to="/browse">Browse</Link>
         <Link to="/upload">Upload</Link>
-        <Link to="/profile">Profile</Link>
-        <Link to="/admin">Admin</Link>
-        <Link to="/login">Login</Link>
+        {isLoggedIn && <Link to="/profile">Profile</Link>}
+        {isLoggedIn && <Link to="/admin">Admin</Link>}
+        {isLoggedIn ? (
+          <button onClick={handleLogout} className="logout-button">Logout</button>
+        ) : (
+          <Link to="/login">Login</Link>
+        )}
       </div>
     </nav>
   );

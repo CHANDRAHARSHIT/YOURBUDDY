@@ -19,6 +19,7 @@ export default function PdfViewer({ file }) {
         file={file}
         onLoadSuccess={onDocumentLoadSuccess}
         loading="Loading PDF..."
+        error="Failed to load PDF file."
       >
         {Array.from(new Array(numPages), (el, index) => (
           <Page

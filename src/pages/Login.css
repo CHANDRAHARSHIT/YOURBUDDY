@@ -11,7 +11,7 @@
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(102,126,234,0.12);
   display: flex;
-  max-width: 700px;
+  max-width: 1500px;
   width: 100%;
   overflow: hidden;
   align-items: stretch; /* Add this line */

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PdfViewer from '../components/PdfViewer';
 
 const colleges = [
   "All Colleges/Universities",
@@ -31,13 +30,11 @@ export default function Browse() {
   const [selectedCollege, setSelectedCollege] = useState(colleges[0]);
   const [selectedSubject, setSelectedSubject] = useState('');
   const [search, setSearch] = useState('');
-  const [showPdf, setShowPdf] = useState(false);
-
   // Handler for clicking a subject card
   const handleSubjectClick = (subject) => {
     setSelectedSubject(subject.name);
     if (subject.name === "Mathematics") {
-      setShowPdf(true);
+      window.open("https://ncert.nic.in/textbook/pdf/jemh1ps.pdf", "_blank");
     }
   };
 
@@ -112,17 +109,6 @@ export default function Browse() {
           </div>
         ))}
       </div>
-
-      {/* PDF Modal for Mathematics */}
-      {showPdf && (
-        <div className="modal-overlay" onClick={() => setShowPdf(false)}>
-          <div className="modal" onClick={e => e.stopPropagation()}>
-            <h2>Analytical Maths Gold PDF</h2>
-            <PdfViewer file={`${process.env.PUBLIC_URL}/pdf_resource/analytical maths gold.pdf`} />
-            <button className="modal-close" onClick={() => setShowPdf(false)}>Close</button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

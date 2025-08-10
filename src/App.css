@@ -5,6 +5,29 @@
   padding: 0;
 }
 
+html {
+  scrollbar-color: #667eea transparent;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+/* For WebKit-based browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+  background: transparent; /* scrollbar track background */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: -webkit-linear-gradient(45deg, #667eea, #764ba2); /* gradient thumb */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* optional: fully transparent track */
+}
+
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9fafb;
@@ -141,7 +164,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 button, .cta {
@@ -187,6 +210,7 @@ input, select, textarea {
 .brand {
   background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
 }
@@ -260,16 +284,18 @@ input, select, textarea {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 2rem 1rem;
+  }
 
+  .footer-section {
+    text-align: center;
+  }
 
+  .footer-section h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-
-
-
-
-
-
-
-
-
-}  }    justify-content: center;  .social-icons {    }    transform: translateX(-50%);    left: 50%;  .footer-section h3::after {    }    text-align: center;    text-align: center
+  .social-icons {
+    justify-content: center;
+  }
+}

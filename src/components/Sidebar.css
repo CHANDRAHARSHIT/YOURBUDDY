@@ -15,9 +15,9 @@
   font-weight: 500;
   padding: 0.7rem 1rem;
   border-radius: 8px;
-  transition: background 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
 }
 .sidebar-pro a:hover {
-  background: #eaf6ff;
+  background-color: #eaf6ff;
   color: #2d7cff;
 }

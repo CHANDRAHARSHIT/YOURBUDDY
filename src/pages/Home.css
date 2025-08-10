@@ -26,6 +26,7 @@
 .brand {
   background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -84,6 +85,7 @@
   color: #667eea;
   background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -311,14 +313,23 @@
   min-width: 320px;
   max-width: 90vw;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.model .cta {
+  text-align: center;
 }
 
 .modal-close {
-  margin-top: 1.5rem;
+  margin-top: 0rem;
   background: linear-gradient(90deg,#667eea,#764ba2);
   color: #fff;
   border: none;
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.2rem;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
