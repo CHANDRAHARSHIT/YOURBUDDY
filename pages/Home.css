@@ -1,0 +1,360 @@
+.home-hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(120deg, #eaf6ff 0%, #f7e8ff 100%);
+}
+
+.hero-content {
+  max-width: 1200px;
+  text-align: center;
+}
+
+.hero-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.brand {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #4b5563;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+}
+
+.cta {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.cta.secondary {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #667eea;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+  color: #4b5563;
+}
+
+/* New Section Styles */
+.home-container {
+  overflow-x: hidden;
+}
+
+.features-section,
+.community-section,
+.faq-section,
+.feedback-section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features-section h2,
+.community-section h2,
+.faq-section h2,
+.feedback-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.features-section h2::after,
+.community-section h2::after,
+.faq-section h2::after,
+.feedback-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.feature-card p {
+  color: #6b7280;
+}
+
+/* Community Section */
+.community-section {
+  background-color: #f9fafb;
+}
+
+.community-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.community-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.community-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.community-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.feature-list {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.feature-list li {
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+}
+
+/* FAQ Section */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faq-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.faq-item h3 {
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.faq-item p {
+  color: #6b7280;
+}
+
+.view-all-faq {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.text-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* Feedback Section */
+.feedback-section {
+  background: linear-gradient(120deg, #eaf6ff 0%, #f7e8ff 100%);
+}
+
+.feedback-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feedback-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(102,126,234,0.10);
+  padding: 1.2rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  transition: box-shadow 0.2s;
+  min-width: 220px;
+  display: inline-block;
+}
+
+.feedback-card:hover {
+  box-shadow: 0 0 0 2px #764ba2;
+  background: #f3f0ff;
+}
+
+.feedback-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feedback-card h3 {
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.feedback-card p {
+  color: #6b7280;
+}
+
+/* Add to Home.css */
+.feature-clickable:hover {
+  box-shadow: 0 0 0 2px #764ba2;
+  background: #f3f0ff;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(60,60,80,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 8px 32px rgba(102,126,234,0.18);
+  min-width: 320px;
+  max-width: 90vw;
+  position: relative;
+}
+
+.modal-close {
+  margin-top: 1.5rem;
+  background: linear-gradient(90deg,#667eea,#764ba2);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .features-section,
+  .community-section,
+  .faq-section,
+  .feedback-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .community-content {
+    flex-direction: column;
+  }
+  
+  .features-section h2,
+  .community-section h2,
+  .faq-section h2,
+  .feedback-section h2 {
+    font-size: 1.8rem;
+  }
+}
