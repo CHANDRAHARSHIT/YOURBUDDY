@@ -52,8 +52,8 @@
 
 .logout-button {
   background: transparent;
-  border: 1px solid #667eea;
-  color: #667eea;
+  border: 1px solid #fff;
+  color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 8px;
   cursor: pointer;
@@ -62,6 +62,39 @@
 }
 
 .logout-button:hover {
-  background: #667eea;
-  color: white;
+  background: #fff;
+  color: #667eea;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }

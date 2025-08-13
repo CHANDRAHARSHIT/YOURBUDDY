@@ -111,26 +111,16 @@ export default function Home() {
       <div className="features-section">
         <h2>Platform Features</h2>
         <div className="features-grid">
-          <div
-            className="feature-card feature-clickable"
-            onClick={() => setShowResources(true)}
-            style={{ cursor: 'pointer' }}
-            title="Browse Student Resources"
-          >
+          <Link to="/browse" className="feature-card feature-clickable" title="Browse Student Resources">
             <div className="feature-icon">📚</div>
             <h3>Study Resources</h3>
             <p>Access thousands of notes, previous year papers, and study materials</p>
-          </div>
-          <div
-            className="feature-card feature-clickable"
-            onClick={() => setShowCommunity(true)}
-            style={{ cursor: 'pointer' }}
-            title="Join Student Community"
-          >
+          </Link>
+          <Link to="/community" className="feature-card feature-clickable" title="Join Student Community">
             <div className="feature-icon">👥</div>
             <h3>Student Community</h3>
             <p>Connect with fellow students, discuss topics, and solve doubts together</p>
-          </div>
+          </Link>
           <div
             className="feature-card feature-clickable"
             onClick={() => setShowTimer(true)}
@@ -141,16 +131,11 @@ export default function Home() {
             <h3>Study Timer</h3>
             <p>Track your study sessions with our built-in Pomodoro timer</p>
           </div>
-          <div
-            className="feature-card feature-clickable"
-            onClick={() => setShowProgress(true)}
-            style={{ cursor: 'pointer' }}
-            title="View Progress"
-          >
+          <Link to="/profile" className="feature-card feature-clickable" title="View Progress">
             <div className="feature-icon">📊</div>
             <h3>Progress Tracking</h3>
             <p>Monitor your learning progress with detailed analytics</p>
-          </div>
+          </Link>
         </div>
       </div>
 

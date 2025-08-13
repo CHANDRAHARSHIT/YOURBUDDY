@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Browse from './pages/Browse';
@@ -60,15 +60,15 @@ function App() {
             <div className="footer-section">
               <h3>Quick Links</h3>
               <ul>
-                <li><a href="/browse">Browse Resources</a></li>
-                <li><a href="/upload">Upload Notes</a></li>
-                <li><a href="/community">Community</a></li>
-                <li><a href="/faq">FAQs</a></li>
+                <li><Link to="/browse">Browse Resources</Link></li>
+                <li><Link to="/upload">Upload Notes</Link></li>
+                <li><Link to="/community">Community</Link></li>
+                <li><Link to="/faq">FAQs</Link></li>
               </ul>
             </div>
             <div className="footer-section">
               <h3>Contact</h3>
-              <p>Email: support@yourbuddy.com</p>
+              <p>Email: summercoders25@gmail.com</p>
               <p>Phone: +91 1234567890</p>
               <div className="social-icons">
                 <a href="#" className="social-icon">FB</a>
