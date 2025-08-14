@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Browse from './pages/Browse';
 import Upload from './pages/Upload';
 import Profile from './pages/Profile';
+import Team from './pages/Team';
 import Admin from './pages/Admin';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -42,6 +43,7 @@ function App() {
             <Route path="/upload" element={<Upload />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="/team" element={<Team />} />
             <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
             <Route path="/register" element={<Register />} />
             <Route path="/community" element={<Community />} />
@@ -62,6 +64,7 @@ function App() {
               <ul>
                 <li><Link to="/browse">Browse Resources</Link></li>
                 <li><Link to="/upload">Upload Notes</Link></li>
+                <li><Link to="/team">Team</Link></li>
                 <li><Link to="/community">Community</Link></li>
                 <li><Link to="/faq">FAQs</Link></li>
               </ul>

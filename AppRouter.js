@@ -7,6 +7,7 @@ import Profile from './pages/Profile';
 import AdminDashboard from './pages/AdminDashboard';
 import UploadResource from './pages/UploadResource';
 import BrowseResources from './pages/BrowseResources';
+import Team from './pages/Team';
 import NavBar from './components/NavBar';
 
 export default function AppRouter() {
@@ -21,6 +22,7 @@ export default function AppRouter() {
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/upload" element={<UploadResource />} />
         <Route path="/browse" element={<BrowseResources />} />
+        <Route path="/team" element={<Team />} />
       </Routes>
     </Router>
   );

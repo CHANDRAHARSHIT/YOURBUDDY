@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Browse.css'; // Assuming you have a CSS file for styling
 
 const colleges = [
   "All Colleges/Universities",
@@ -45,13 +46,13 @@ export default function Browse() {
   );
 
   return (
-    <div>
+    <div className='browse-container'>
       <h2>Browse Subjects</h2>
-      <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+      <div className='subject-filters'>
         <select
           value={selectedCollege}
           onChange={e => setSelectedCollege(e.target.value)}
-          style={{ padding: '0.5rem', borderRadius: '6px', border: '1px solid #ddd' }}
+          className="filter-select"
         >
           {colleges.map(college => (
             <option key={college} value={college}>{college}</option>
@@ -60,7 +61,7 @@ export default function Browse() {
         <select
           value={selectedSubject}
           onChange={e => setSelectedSubject(e.target.value)}
-          style={{ padding: '0.5rem', borderRadius: '6px', border: '1px solid #ddd', minWidth: '200px' }}
+          className="filter-select"
         >
           <option value="">All Subjects</option>
           {subjects.map(sub => (
@@ -72,42 +73,27 @@ export default function Browse() {
           placeholder="Search subject..."
           value={search}
           onChange={e => setSearch(e.target.value)}
-          style={{ padding: '0.5rem', borderRadius: '6px', border: '1px solid #ddd', minWidth: '200px' }}
+          className="filter-input"
         />
       </div>
-      <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
-        {filteredSubjects.map(sub => (
-          <div
+      <div className='card-menu'>
+
+        <div className='subject-list'>
+          {filteredSubjects.map(sub => (
+            <div
             key={sub.id}
-            style={{
-              background: sub.color,
-              color: '#fff',
-              borderRadius: '16px',
-              padding: '2rem',
-              minWidth: '220px',
-              cursor: 'pointer',
-              boxShadow: '0 2px 8px rgba(102,126,234,0.10)'
-            }}
+            className="subject-card"
+            style={{ background: sub.color }}
             onClick={() => handleSubjectClick(sub)}
-          >
-            <h3>{sub.name}</h3>
-            <p>{sub.description}</p>
-            {sub.name === "Mathematics" && (
-              <span style={{
-                display: 'inline-block',
-                marginTop: '1rem',
-                background: '#fff',
-                color: sub.color,
-                padding: '0.4rem 0.8rem',
-                borderRadius: '8px',
-                fontWeight: 'bold',
-                fontSize: '0.95rem'
-              }}>
-                View Analytical Maths Gold PDF
+            >
+              <h3>{sub.name}</h3>
+              <p>{sub.description}</p>
+              <span className="subject-card-link" style={{ color: sub.color }}>
+                View {sub.name} PDF
               </span>
-            )}
-          </div>
-        ))}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

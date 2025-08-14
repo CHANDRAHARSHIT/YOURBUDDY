@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.team-page-container {
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 50%, #00c6ff 100%); /* Multi-color gradient */
+  min-height: 100vh;
+  color: #fff; /* Adjust text color for better contrast with the background */
+}
+
+.team-page-container h1 {
+  font-size: 3em;
+  color: #fff; /* Changed to white for better contrast */
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+  font-family: 'Pacifico';
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for readability */
+}
+
+.team-page-container h1::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background-color: #fff; /* Changed to white for better contrast */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  border-radius: 2px;
+}
+
+.team-category {
+  margin-bottom: 60px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque white background for readability */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-category h2 {
+  font-size: 2.5em;
+  color: #4f46e5; /* Keep original color for headings within sections */
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.team-category h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background-color: #4f46e5;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px;
+  border-radius: 1.5px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Specific style for a single card in a grid to reduce its effective width */
+.team-grid:has(.team-card:only-child) {
+  grid-template-columns: minmax(280px, 400px); /* Adjust max-width for single card */
+  justify-content: center; /* Center the single card */
+}
+
+
+/* Flip Card Styles */
+.team-card {
+  background-color: transparent; /* Make card background transparent for flip effect */
+  width: 100%;
+  height: 200px; /* Fixed height for consistent card size */
+  perspective: 1000px; /* 3D perspective */
+}
+
+.team-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Apply shadow to inner for flip */
+  border-radius: 15px;
+}
+
+.team-card:hover .team-card-inner {
+  transform: rotateY(180deg);
+}
+
+.team-card-front, .team-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.team-card-front {
+  background-color: #fff;
+  color: #333;
+}
+
+.team-card-back {
+  background-color: #007bff; /* Blue background for the back */
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+.team-card-front h3 {
+  font-size: 1.8em;
+  color: #007bff;
+  margin-bottom: 0; /* Remove margin for name only */
+}
+
+.team-card-back p {
+  font-size: 1.4em; /* Increased font size for description */
+  color: #fff; /* White text for description on blue background */
+  line-height: 1.6;
+  font-family: 'Brush Script MT', cursive, sans-serif; /* Added cursive font */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-page-container h1 {
+    font-size: 2.5em;
+  }
+
+  .team-category h2 {
+    font-size: 2em;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .team-card {
+    height: 180px; /* Adjust height for smaller screens */
+  }
+
+  .team-card-front, .team-card-back {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-page-container {
+    padding: 30px 15px;
+  }
+
+  .team-page-container h1 {
+    font-size: 2em;
+    margin-bottom: 40px;
+  }
+
+  .team-category h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    height: 160px; /* Further adjust height for very small screens */
+  }
+
+  .team-card-front, .team-card-back {
+    padding: 20px;
+  }
+
+  .team-card-front h3 {
+    font-size: 1.5em;
+  }
+
+  .team-card-back p {
+    font-size: 1em; /* Adjusted for very small screens */
+  }
+}

@@ -15,7 +15,7 @@ const colleges = [
   "College of Technology",
   "Graphic Era Deemed University",
   "Lucknow University",
-  "Other"
+  "Other",
 ];
 
 const subjects = [

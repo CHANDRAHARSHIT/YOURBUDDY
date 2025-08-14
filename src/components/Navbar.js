@@ -27,6 +27,7 @@ export default function Navbar({ isLoggedIn, handleLogout }) {
         <Link to="/">Home</Link>
         <Link to="/browse">Browse</Link>
         <Link to="/upload">Upload</Link>
+        <Link to="/team">Team</Link>
         {isLoggedIn && <Link to="/profile">Profile</Link>}
         {isLoggedIn && <Link to="/admin">Admin</Link>}
         {isLoggedIn ? (
